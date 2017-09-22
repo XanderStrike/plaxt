@@ -2,13 +2,40 @@
 <html>
   <head>
     <title>Plaxt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <div class="header">
+        <h1>Plex Webhooks for Trakt</h1>
+
+        <div class="wrapper">
+          <div class="grid1"><%= link_to image_tag('plex.png', width: '100%'), 'https://plex.tv' %></div>
+          <div class="grid2"><%= image_tag 'heart.png', width: '100%' %></div>
+          <div class="grid3"><%= link_to image_tag('trakt.png', width: '100%'), 'https://trakt.tv' %></div>
+        </div>
+      </div>
+
+      <div class="main">
+        <%= yield %>
+      </div>
+
+      <div class="foot">
+        Made with <3 by <%= link_to 'Alex Standke', 'http://astandke.com/', target: :blank %>. All product names, logos, and brands are property of their respective owners.
+      </div>
+    </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= yield :javascript %>
   </body>
 </html>

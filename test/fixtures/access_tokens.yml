@@ -1,0 +1,34 @@
+# == Schema Information
+#
+# Table name: access_tokens
+#
+#  id            :integer          not null, primary key
+#  uid           :string
+#  access_token  :string
+#  token_type    :string
+#  expires_in    :string
+#  refresh_token :string
+#  scope         :string
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uid: MyString
+  access_token: MyString
+  token_type: MyString
+  expires_in: MyString
+  refresh_token: MyString
+  scope: MyString
+  created_at: MyString
+
+two:
+  uid: MyString
+  access_token: MyString
+  token_type: MyString
+  expires_in: MyString
+  refresh_token: MyString
+  scope: MyString
+  created_at: MyString

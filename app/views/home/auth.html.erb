@@ -1,0 +1,24 @@
+<% if @success %>
+  <h2>Congratulations!</h2>
+  <p>That was easy wasn't it?</p>
+
+  <p>Here is your webhook URL:</p>
+
+  <pre>
+  <%= "https://plaxt.herokuapp.com/webhook/#{@token.uid}" %>
+  </pre>
+
+  <p>Now ask Plex to use it:</p>
+
+  <ol>
+    <li>Open up the <%= link_to 'Plex Webhooks Panel', 'https://app.plex.tv/desktop#!/account/webhooks', target: :blank %></li>
+    <li>Click "Add Webhook"</li>
+    <li>Paste the URL above and click save</li>
+  </ol>
+
+  <p>That's it! Get scrobblin'</p>
+<% else %>
+  <h1>Oh shit :(</h1>
+  <p>Sorry, something went wrong. Try again?</p>
+<% end %>
+

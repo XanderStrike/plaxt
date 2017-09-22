@@ -1,0 +1,89 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+a {
+  color: blue;
+}
+
+input {
+  width: calc(100% - 1em);
+  font-size: 24px;
+  padding: 0.5em;
+}
+
+.container {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0 0.5em;
+}
+
+.foot {
+  font-size: 12px;
+  padding: 1em 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.grid1 {
+  grid-column: 1;
+  grid-row:1;
+}
+.grid2 {
+  grid-column: 2;
+  grid-row:1;
+}
+.grid3 {
+  grid-column: 3;
+  grid-row:1;
+}
+
+.header {
+  background-color: #333;
+  margin: 0;
+  padding: 1em;
+  color: #fff;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    font-size: 60px;
+    padding-bottom: 10px;
+  }
+}
+
+.main {
+  background-color: #efefef;
+  padding: 1em;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.button {
+  color: #fff;
+  background-color: #333;
+  font-size: 40px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #222;
+}
+
+.button-group {
+  text-align: center;
+  padding: 2em;
+}

@@ -1,0 +1,20 @@
+<h2>The simplest way to scrobble with Plex</h3>
+
+<p>Plex provides webhook integration for all Plex Pass subscribers, and users of their servers. A webhook is a request that the Plex application sends to third party services when a user takes an action, such as watching a movie or episode.</p>
+
+<p>You can ask Plex to send these webhooks to this tool, which will then log those plays in your Trakt account.</p>
+
+<p>Unlike <a href="https://github.com/trakt/Plex-Trakt-Scrobbler">the official plugin</a>, this tool can be set up on any Plex server, on any OS in a few simple steps through your web browser. No complicated install instructions, no mucking around with the terminal. Just a few clicks and you're done.</p>
+
+<p>Note that it does not sync plays across apps, but it's so easy to use it might be worth the tradeoff. I certainly think so.</p>
+
+<p>Ready to get started? Simply enter your Plex username, and click the big friendly button.</p>
+
+<input class="js-username" placeholder="Plex Username">
+<div class="button-group"><span class="button js-authorize">Authorize with Trakt</span></div>
+
+<%= content_for :javascript do %>
+<script>
+  Home.init('<%= TraktService.build_auth_link %>')
+</script>
+<% end %>
