@@ -15,6 +15,6 @@
 
 <%= content_for :javascript do %>
 <script>
-  Home.init('<%= TraktService.build_auth_link %>')
+  Home.init('<%= TraktService.build_auth_link(request.base_url) %>')
 </script>
 <% end %>

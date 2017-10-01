@@ -4,19 +4,18 @@ require 'pp'
 class TraktService
   CLIENT_ID = ENV['CLIENT_ID']
   CLIENT_SECRET = ENV['CLIENT_SECRET']
-  REDIRECT_URI = 'http://plaxt.herokuapp.com'
 
   class << self
-    def build_auth_link
-      "https://trakt.tv/oauth/authorize?client_id=#{CLIENT_ID}&redirect_uri=http%3A%2F%2Fplaxt.herokuapp.com%3Fusername=USERNAME&response_type=code"
+    def build_auth_link(redirect_uri)
+      "https://trakt.tv/oauth/authorize?client_id=#{CLIENT_ID}&redirect_uri=#{URI.encode(redirect_uri)}%3Fusername=USERNAME&response_type=code"
     end
 
-    def get_token(code, username)
+    def get_token(code, username, redirect_uri)
       values = {
         code: code,
         client_id: CLIENT_ID,
         client_secret: CLIENT_SECRET,
-        redirect_uri: "#{REDIRECT_URI}?username=#{username}",
+        redirect_uri: "#{redirect_uri}?username=#{username}",
         grant_type: 'authorization_code'
       }
 

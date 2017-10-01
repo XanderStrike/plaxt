@@ -5,7 +5,7 @@
   <p>Here is your webhook URL:</p>
 
   <pre>
-  <%= "https://plaxt.herokuapp.com/webhook/#{@token.uid}" %>
+  <%= "#{request.base_url}/webhook/#{@token.uid}" %>
   </pre>
 
   <p>Now ask Plex to use it:</p>
