@@ -1,24 +1,11 @@
-# README
+# Plaxt
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple webhooks based scrobbler to sync your Plex plays with Trakt
 
-Things you may want to cover:
+I'm hosting it myself at [plaxt.herokuapp.com](http://plaxt.herokuapp.com), feel free to use this instance, it will always be updated with the latest and greatest.
 
-* Ruby version
+If you'd like to host it yourself to avoid exposing your plays to me, you can host it yourself on Heroku by clicking the button below:
 
-* System dependencies
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+You'll need to create your own API app set up the CLIENT_ID and CLIENT_SECRET env variables on your heroku instance.
