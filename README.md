@@ -9,3 +9,5 @@ If you'd like to host it yourself to avoid exposing your plays to me, you can ho
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 You'll need to create your own API app set up the CLIENT_ID and CLIENT_SECRET env variables on your heroku instance. You will get `The redirect uri included is not valid.` from Trakt if you don't.
+
+You can also host it anywhere you can normally host Rails apps.
