@@ -8,4 +8,7 @@ class HomeController < ApplicationController
       return render :auth
     end
   end
+
+  def donate
+  end
 end
